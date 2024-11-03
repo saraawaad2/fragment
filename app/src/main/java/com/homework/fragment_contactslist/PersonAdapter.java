@@ -1,6 +1,5 @@
 package com.homework.fragment_contactslist;
 
-import android.app.Person;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
-    private ArrayList<Person>People;
+    private ArrayList<com.homework.fragment_contactslist.Person>People;
     ItemSelected activity;
 
     public interface ItemSelected{
@@ -60,3 +59,4 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         return People.size();
     }
 }
+

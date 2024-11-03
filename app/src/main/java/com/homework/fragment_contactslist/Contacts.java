@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 public class Contacts extends Fragment {
  public static    RecyclerView recyclerView;
-    public static RecyclerView.Adapter<RecyclerView.ViewHolder> adapter;
+    public static RecyclerView.Adapter adapter;
     public static    RecyclerView.LayoutManager manager;
 
     public Contacts() {
@@ -28,7 +28,7 @@ public class Contacts extends Fragment {
         recyclerView.setHasFixedSize(true);
         manager=new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(manager);
-        adapter=new PersonAdapter(this.getActivity(),MainActivity.nas);
+        adapter= new PersonAdapter(this.getActivity(), MainActivity.nas);
         recyclerView.setAdapter(adapter);
         return view;
     }

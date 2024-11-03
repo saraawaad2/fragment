@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PersonAdapter.ItemSelected {
     public static ArrayList<Person> nas;
     TextView tvDate;
     String CurrentDate;
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         nas.add(new Person("Ahmad helmi", "05543009092", R.drawable.ahmad));
         nas.add(new Person("Ali","054700934",R.drawable.ali));
     }
+
+    @Override
     public void onItemClicked(int Index) {
         if (!nas.isEmpty()) {
             detailsFrag.updateTexts(nas.get(Index).getName(), nas.get(Index).getPhone());
